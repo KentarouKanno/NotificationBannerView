@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yC0-Ey-kH0">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--BannerView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NotificationBannerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="S3N-t3-Y8y">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="am8-e2-7Em">
+                                    <size key="itemSize" width="320" height="181"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomCell" id="N2T-ga-G5G" customClass="CustomCell" customModule="NotificationBannerView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="181"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="181"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iphone.png" translatesAutoresizingMaskIntoConstraints="NO" id="g1i-as-z2X">
+                                                    <rect key="frame" x="22" y="60" width="146" height="106"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Syc-Tb-29g">
+                                                    <rect key="frame" x="176" y="126" width="46" height="30"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKr-pd-TWX">
+                                                    <rect key="frame" x="181" y="40" width="90" height="30"/>
+                                                    <color key="backgroundColor" red="0.75379688779999998" green="1" blue="0.31523342999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Show"/>
+                                                    <connections>
+                                                        <action selector="showBanner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HZP-NN-pKB"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Banner TEST" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qll-PP-JyT">
+                                                    <rect key="frame" x="21" y="22" width="134" height="29"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <color key="textColor" red="1" green="0.80664015010000001" blue="0.77544528670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oed-SY-5Km">
+                                                    <rect key="frame" x="186" y="84" width="82" height="30"/>
+                                                    <color key="backgroundColor" red="0.99351106359999997" green="0.92315694199999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Next"/>
+                                                    <connections>
+                                                        <segue destination="wwc-1x-M1j" kind="push" id="Cwp-pq-cke"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.97822859129999995" green="1" blue="0.65738289709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="image" destination="g1i-as-z2X" id="xc1-X5-YUz"/>
+                                            <outlet property="title" destination="qll-PP-JyT" id="Pgv-HU-yDF"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="qU9-JE-nUa"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="gOh-lH-e6d"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S3N-t3-Y8y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7ew-mR-hrx"/>
+                            <constraint firstAttribute="trailing" secondItem="S3N-t3-Y8y" secondAttribute="trailing" id="dXd-QL-9xg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="S3N-t3-Y8y" secondAttribute="bottom" id="erw-Ss-rdq"/>
+                            <constraint firstItem="S3N-t3-Y8y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="k35-jE-dDv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="BannerView" id="Pyl-gg-rYA"/>
+                    <connections>
+                        <outlet property="myCollectionView" destination="S3N-t3-Y8y" id="omu-pU-04Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="595" y="406"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2o0-S0-raY">
+            <objects>
+                <viewController id="wwc-1x-M1j" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z64-Df-WJr"/>
+                        <viewControllerLayoutGuide type="bottom" id="If2-Dw-VTf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g2l-IC-0c5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.50006795699999995" green="0.89616402120000005" blue="0.41080766070000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jA3-mX-vh6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wHt-1V-xrW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="974" y="406"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TOz-Hm-xrZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yC0-Ey-kH0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k4o-lQ-BAf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="c2J-vJ-RJf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKx-de-XN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="77" y="406"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iphone.png" width="560" height="468"/>
+    </resources>
+</document>
